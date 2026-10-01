@@ -279,22 +279,29 @@ form input[type=button]{
 }
 
 
+
+
 /* ---------- lista de produtos ----------*/
 .list_produtos{
     background-color: var(--corSecundaria);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* padding: 50px 0; */
 }
 
 table{
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     width: 100%;
     font-family: var(--fontHanken);
     text-transform: uppercase;
+    border-collapse: collapse;
 }
 
 thead{
     font-size: 12px;
     font-weight: 600;
     color: #444444;
+    text-align: left;
 }
 
 tbody{
@@ -303,6 +310,12 @@ tbody{
 
 table svg{
     width: 35px;
+    color: #bd0000;
+}
+
+th, td{
+    border-bottom: solid 1px #444444;
+    padding: 5px 10px;
 }
 
 
@@ -357,6 +370,117 @@ table svg{
     max-width: 500px;
     width: 80%;
 }
+
+/* ----------- Tabela ------------- */
+thead{
+    display: none;
+}
+
+tbody tr{
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #444444;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: #00000040 5px 5px 5px;
+    max-width: 500px;
+    margin: 0 auto 50px;
+}
+
+tbody td{
+    border: none;
+}
+
+tbody td::before{
+    content: attr(data-cell) ": ";
+    font-size: 12px;
+    color: #444444;
+}
+
+
+/* ----------- footer ---------- */
+footer{
+    height: 300px;
+}
+
+.footer_container{
+    flex-direction: column;
+}
+
+footer img{
+    order: 2;
+    /* margin: 50px 0; */
+
+}
+
+footer span{
+    order: 3;
+    font-size: 12px;
+}
+
+footer a{
+    font-size: 12px;
+    order: 1;
+    
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------ FOOTER ------ */
+footer{
+    background-color: #FFF4F4;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+  
+
+}
+
+.nav_footer{
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+}
+
+.footer_container span,
+.nav_footer a{
+    font-family:  "Hanken Grotesk", sans-serif;
+   
+    
+
+}
+
+
+.nav_footer a{
+    text-decoration: none;
+    color: #747878;
 }
 
 
